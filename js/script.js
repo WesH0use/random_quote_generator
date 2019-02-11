@@ -41,7 +41,7 @@ var quotes = [
 
   },
   {
-    quote: "Okay, I write overblown, purple, self-indulgent prose. So fucking what?.",
+    quote: "Okay, I write overblown, purple, self-indulgent prose. So fucking what?",
     author: "Angela Carter",
     source: '',
     year:'',
@@ -96,7 +96,7 @@ function printQuote () {
   var source = message[2];
   var year = message[3]
 
-  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>";
+  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>" + "<p class='italic'>" + source + "</p>";
 
   if (year != ''){
     message += "<span class='year'>" + year + "</span>"
