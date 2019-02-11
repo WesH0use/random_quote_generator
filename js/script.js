@@ -28,12 +28,6 @@ var quotes = [
     year: "1923"
   },
   {
-    quote: "What a sad paradox, thought Amalfitano. Now even the bookish pharmacists are afraid to take on the great, imperfect, torrential works, books that blaze paths into the unknown...They choose the perfect exercises of great masters. Or what amounts to the same thing: they want to watch the great masters spar, but they have no interest in real combat, when the great masters struggle against that something, that something that terrifies us all, that something that cows us and spurs us on, amid blood and mortal wounds and stench.",
-    author: "Roberto Bolaño",
-    source: "2666",
-    year: '',
-  },
-  {
     quote: "Poetry arises from the desire to get beyond the finite and the historical and to reach the transcendent or diving...The poem is always a record of failure.",
     author: "Ben Lerner",
     source: "The Hatred of Poetry",
@@ -59,7 +53,7 @@ var quotes = [
     year:''
   },
   {
-    quote: "Unforgettable. Yes, that's what she said. An unforgettable love / and brief / Like a hurricane? / No, a love brief as the sigh of a guillotined head.",
+    quote: "Unforgettable. Yes, that's what she said. An unforgettable love. And brief. Like a hurricane?. No, a love brief as the sigh of a guillotined head.",
     author: "Roberto Bolaño",
     source: "The Romantic Dogs",
     year:''
@@ -96,9 +90,7 @@ function printQuote () {
   var source = message[2];
   var year = message[3]
 
-  var html = "<p class='quote'>" + quote + "</p>" +
-            "<p class='source'>" + author + "</p>" +
-            "<p class='italic'>, " + source + "</p>";
+  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>" + "<p class='italic'>, " + source + "</p>";
             if (year != ''){
               message += "<p class='italic'>, " + year + "</p>";
             } else document.getElementById('quote-box').innerHTML = html;
