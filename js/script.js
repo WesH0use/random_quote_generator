@@ -96,15 +96,16 @@ function printQuote () {
   var source = message[2];
   var year = message[3]
 
-  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>" + "<p class='italic'>" + source + "</p>";
-
-  if (year != ''){
-    message += "<span class='year'>" + year + "</span>"
-  } else {
-    document.getElementById('quote-box').innerHTML = html;
-  }
+  var html = "<p class='quote'>" + quote + "</p>" +
+            "<p class='source'>" + author + "</p>" +
+            "<p class='italic'>, " + source + "</p>";
+            if (year != ''){
+              message += "<p class='italic'>, " + year + "</p>";
+            } else document.getElementById('quote-box').innerHTML = html;
   return message
-}
+  }
+
+
 
 //Function to genereate random rgb color value
 function randomColorGenerator() {
