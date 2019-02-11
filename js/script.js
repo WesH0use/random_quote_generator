@@ -90,9 +90,9 @@ function printQuote () {
   var source = message[2];
   var year = message[3]
 
-  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>" + "<p class='italic'>, " + source + "</p>";
+  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>" + "<p class='citation'> " + source + "</p>";
             if (year != ''){
-              message += "<p class='italic'>, " + year + "</p>";
+              message += "<p class='year'>, " + year + "</p>";
             } else document.getElementById('quote-box').innerHTML = html;
   return message
   }
