@@ -71,12 +71,12 @@ returns message string
 */
 function printQuote () {
   var message = getRandomQuote();
-  var quote = message[0];
-  var author = message[1];
-  var source = message[2];
-  var year = message[3];
+  var quote = message.quote;
+  var author = message.author;
+  var source = message.source;
+  var year = message.year;
 
-  var html = "<span class='quote'>" + quote + "</span>" + "<span class='source'>" + author + "</span>";
+  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>";
             if (year){
               html += "<span class='year'>, " + year + "</span>";
             } if (source) {
@@ -85,7 +85,6 @@ function printQuote () {
   document.getElementById('quote-box').innerHTML = html;
   return html
   }
-
 
 
 //Function to genereate random rgb color value
