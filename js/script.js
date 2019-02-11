@@ -44,7 +44,7 @@ var quotes = [
     quote: "Once there had been the subterranean language with the underground forces. If speech at all then it was the spaces between the words, and the echoes the words left, or what might be really meant under the surface.",
     author: "Ann Quin",
     source: "The Unmapped Country",
-    year:''
+    year:'111'
   },
   {
     quote: "The soul is said by some to be a bourgeois luxury, which shows a strange misunderstanding both of the soul and bourgeoisie.",
@@ -91,10 +91,10 @@ function printQuote () {
   var year = message[3]
 
   var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>" + "<p class='citation'> " + source + "</p>";
-            if (year != ''){
-              message += "<p class='year'>, " + year + "</p>";
+            if (year){
+              html += "<p class='year'>, " + year + "</p>";
             } else document.getElementById('quote-box').innerHTML = html;
-  return message
+  return html
   }
 
 
