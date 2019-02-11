@@ -19,7 +19,6 @@ var quotes = [
     quote: "You're in a bad way! Apparently, you have developed a soul.",
     author: "Yevgeny Zamyatin",
     source: "A Soviet Heretic",
-    year: ''
   },
   {
     quote: "Art must make its own way and by its own means. The Marxian methods are not the same as the artistic. The party leads the proletariat but not the historic processes of history.",
@@ -31,49 +30,36 @@ var quotes = [
     quote: "Poetry arises from the desire to get beyond the finite and the historical and to reach the transcendent or diving...The poem is always a record of failure.",
     author: "Ben Lerner",
     source: "The Hatred of Poetry",
-    year:''
 
   },
   {
     quote: "Okay, I write overblown, purple, self-indulgent prose. So fucking what?",
     author: "Angela Carter",
-    source: '',
-    year:'',
   },
   {
     quote: "Once there had been the subterranean language with the underground forces. If speech at all then it was the spaces between the words, and the echoes the words left, or what might be really meant under the surface.",
     author: "Ann Quin",
     source: "The Unmapped Country",
-    year:'111'
   },
   {
     quote: "The soul is said by some to be a bourgeois luxury, which shows a strange misunderstanding both of the soul and bourgeoisie.",
     author: "David Gascoyne",
     source: "A Vagrant",
-    year:''
   },
   {
     quote: "Unforgettable. Yes, that's what she said. An unforgettable love. And brief. Like a hurricane?. No, a love brief as the sigh of a guillotined head.",
     author: "Roberto Bolaño",
     source: "The Romantic Dogs",
-    year:''
   }
 ]
 
 /*
 Function that generates a random number..
 Random number used to index from the global quotes array
-local variables of quote, source, author, year are set to the randomQuote
-returns an array of the quote, author, source, and year
 */
 function getRandomQuote () {
   var randomNum = Math.floor(Math.random() * quotes.length);
-  var RandomQuote = quotes[randomNum];
-  var quote = RandomQuote.quote;
-  var source = RandomQuote.source;
-  var author = RandomQuote.author;
-  var year = RandomQuote.year;
-  return [quote, author, source, year];
+  return quotes[randomNum]
 }
 
 /*
@@ -88,12 +74,15 @@ function printQuote () {
   var quote = message[0];
   var author = message[1];
   var source = message[2];
-  var year = message[3]
+  var year = message[3];
 
-  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>" + "<p class='citation'> " + source + "</p>";
+  var html = "<span class='quote'>" + quote + "</span>" + "<span class='source'>" + author + "</span>";
             if (year){
-              html += "<p class='year'>, " + year + "</p>";
-            } else document.getElementById('quote-box').innerHTML = html;
+              html += "<span class='year'>, " + year + "</span>";
+            } if (source) {
+              html += "<span class='citation'> " + source + "</span>";
+            };
+  document.getElementById('quote-box').innerHTML = html;
   return html
   }
 
