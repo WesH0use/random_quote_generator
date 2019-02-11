@@ -10,7 +10,7 @@ var red;
 
 var quotes = [
   {
-    quote: "At the same pace that mankind masters nature, man seems to become enslaved to other men or to his own infamy...All our invention and progress seem to result in endowing material forces with intellectual life, and in stultifying human life into a material force.",
+    quote: "All our invention and progress seem to result in endowing material forces with intellectual life, and in stultifying human life into a material force.",
     author: "Karl Marx",
     source: "The People's Paper",
     year: "1856",
@@ -118,8 +118,6 @@ function randomColorGenerator() {
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-document.getElementById('loadQuote').addEventListener("click", randomColorGenerator, false);
-
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
