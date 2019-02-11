@@ -75,7 +75,7 @@ returns an array of the quote, author, source, and year
 function getRandomQuote () {
   var randomNum = Math.floor(Math.random() * quotes.length);
   var RandomQuote = quotes[randomNum];
-  var quote = randomQuote.quote;
+  var quote = RandomQuote.quote;
   var source = randomQuote.source;
   var author = randomQuote.author;
   var year = randomQuote.year;
