@@ -76,9 +76,9 @@ function getRandomQuote () {
   var randomNum = Math.floor(Math.random() * quotes.length);
   var RandomQuote = quotes[randomNum];
   var quote = RandomQuote.quote;
-  var source = randomQuote.source;
-  var author = randomQuote.author;
-  var year = randomQuote.year;
+  var source = RandomQuote.source;
+  var author = RandomQuote.author;
+  var year = RandomQuote.year;
   return [quote, author, source, year];
 }
 
