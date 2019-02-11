@@ -7,7 +7,6 @@ FSJS project 1 - A Random Quote Generator
 var green;
 var blue;
 var record
-var rgbColor;
 
 var quotes = [
   {
@@ -68,7 +67,7 @@ var quotes = [
 ]
 
 /*
-Function that generates a random number.
+Function that generates a random number..
 Random number used to index from the global quotes array
 local variables of quote, source, author, year are set to the randomQuote
 returns an array of the quote, author, source, and year
@@ -107,8 +106,15 @@ function printQuote () {
   return message
 }
 
-
-
+//Function to genereate random rgb color value
+function randomColorGenerator() {
+	var randomColor;
+	red = Math.floor(Math.random() * 256 );
+	green = Math.floor(Math.random() * 256 );
+	blue = Math.floor(Math.random() * 256 );
+	randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+	return randomColor;
+}
 
 
 /***
@@ -119,6 +125,8 @@ function printQuote () {
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", randomColorGenerator, false);
+
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
