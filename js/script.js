@@ -35,11 +35,13 @@ var quotes = [
   {
     quote: "Okay, I write overblown, purple, self-indulgent prose. So fucking what?",
     author: "Angela Carter",
+
   },
   {
     quote: "Once there had been the subterranean language with the underground forces. If speech at all then it was the spaces between the words, and the echoes the words left, or what might be really meant under the surface.",
     author: "Ann Quin",
     source: "The Unmapped Country",
+    source: "2018"
   },
   {
     quote: "The soul is said by some to be a bourgeois luxury, which shows a strange misunderstanding both of the soul and bourgeoisie.",
@@ -76,9 +78,9 @@ function printQuote () {
   var source = message.source;
   var year = message.year;
 
-  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author + "</p>";
+  var html = "<p class='quote'>" + quote + "</p>" + "<p class='source'>" + author;
             if (year){
-              html += "<span class='year'>, " + year + "</span>";
+              html += "<span class='year'>" + year + "</span>";
             } if (source) {
               html += "<span class='citation'> " + source + "</span>";
             };
