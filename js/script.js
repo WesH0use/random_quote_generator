@@ -1,12 +1,4 @@
-/******************************************
-Treehouse Techdegree:
-FSJS project 1 - A Random Quote Generator
-******************************************/
 
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-var green;
-var blue;
-var red;
 
 var quotes = [
   {
@@ -30,6 +22,7 @@ var quotes = [
     quote: "Poetry arises from the desire to get beyond the finite and the historical and to reach the transcendent or diving...The poem is always a record of failure.",
     author: "Ben Lerner",
     source: "The Hatred of Poetry",
+    year: "2016"
 
   },
   {
@@ -41,7 +34,7 @@ var quotes = [
     quote: "Once there had been the subterranean language with the underground forces. If speech at all then it was the spaces between the words, and the echoes the words left, or what might be really meant under the surface.",
     author: "Ann Quin",
     source: "The Unmapped Country",
-    source: "2018"
+    year: "2018"
   },
   {
     quote: "The soul is said by some to be a bourgeois luxury, which shows a strange misunderstanding both of the soul and bourgeoisie.",
@@ -64,9 +57,11 @@ function getRandomQuote () {
   return quotes[randomNum]
 }
 
+function randomRGB() {
+  return Math.floor(Math.random() * 256);
+  }
 /*
 Local variable message assigned to array from getRandomQuote
-Local variables of quote, source, author, year are set to respective indexes from the array
 sets local html variable to string concat with quote and author
 if there is a year, it's added to the html string
 returns message string
@@ -88,26 +83,4 @@ function printQuote () {
   return html
   }
 
-
-//Function to genereate random rgb color value
-function randomColorGenerator() {
-	var randomColor;
-	red = Math.floor(Math.random() * 256 );
-	green = Math.floor(Math.random() * 256 );
-	blue = Math.floor(Math.random() * 256 );
-	randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-	return randomColor;
-}
-
-
-/***
-  When the "Show another quote" button is clicked, the event listener
-  below will be triggered, and it will call, or "invoke", the `printQuote`
-  function. So do not make any changes to the line of code below this
-  comment.
-***/
-
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
